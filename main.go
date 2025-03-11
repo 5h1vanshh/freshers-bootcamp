@@ -1,14 +1,14 @@
 package main
 
 import (
-	config "freshers-bootcamp/databaseConnect"
+	databaseConnect "freshers-bootcamp/databaseConnect"
 	"freshers-bootcamp/routes"
 
 	"github.com/gin-gonic/gin"
 )
 
 func main() {
-	config.ConnectDB()
+	databaseConnect.ConnectDB()
 	r := gin.Default()
 
 	routes.ProductRoutes(r)
